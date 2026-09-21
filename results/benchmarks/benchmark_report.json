@@ -1,0 +1,52 @@
+{
+  "timestamp": 1790009857.3172636,
+  "metadata": {
+    "os": "Windows",
+    "os_release": "11",
+    "architecture": "AMD64",
+    "python_version": "3.13.2",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD"
+  },
+  "results": [
+    {
+      "devices": 100,
+      "total_requests": 500,
+      "duration_seconds": 0.0007,
+      "throughput_req_per_sec": 671862.54,
+      "p50_latency_ms": 0.001,
+      "p95_latency_ms": 0.002,
+      "p99_latency_ms": 0.003,
+      "error_rate_pct": 0.0
+    },
+    {
+      "devices": 500,
+      "total_requests": 2500,
+      "duration_seconds": 0.0037,
+      "throughput_req_per_sec": 672296.0,
+      "p50_latency_ms": 0.001,
+      "p95_latency_ms": 0.002,
+      "p99_latency_ms": 0.003,
+      "error_rate_pct": 0.0
+    },
+    {
+      "devices": 1000,
+      "total_requests": 5000,
+      "duration_seconds": 0.0082,
+      "throughput_req_per_sec": 607858.38,
+      "p50_latency_ms": 0.001,
+      "p95_latency_ms": 0.002,
+      "p99_latency_ms": 0.003,
+      "error_rate_pct": 0.0
+    },
+    {
+      "devices": 2500,
+      "total_requests": 12500,
+      "duration_seconds": 0.0205,
+      "throughput_req_per_sec": 608556.8,
+      "p50_latency_ms": 0.001,
+      "p95_latency_ms": 0.002,
+      "p99_latency_ms": 0.002,
+      "error_rate_pct": 0.0
+    }
+  ]
+}

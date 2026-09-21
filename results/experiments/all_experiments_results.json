@@ -1,0 +1,162 @@
+{
+  "generated_at": "2026-09-21T16:57:49.652105+00:00",
+  "experiments": {
+    "experiment_a": {
+      "experiment_id": "EXP-A-MISSING-TELEMETRY",
+      "description": "Empirical evaluation of digital twin state reconstruction under packet loss 0% to 40%",
+      "trials_per_tier": 100,
+      "results": [
+        {
+          "packet_loss_rate": 0.0,
+          "loss_percentage": "0%",
+          "mean_absolute_reconstruction_error": 0.0,
+          "mean_confidence": 1.0,
+          "state_divergence_score": 0.0,
+          "inferred_packet_ratio": 0.0
+        },
+        {
+          "packet_loss_rate": 0.1,
+          "loss_percentage": "10%",
+          "mean_absolute_reconstruction_error": 0.0003,
+          "mean_confidence": 1.0,
+          "state_divergence_score": 0.065,
+          "inferred_packet_ratio": 0.13
+        },
+        {
+          "packet_loss_rate": 0.2,
+          "loss_percentage": "20%",
+          "mean_absolute_reconstruction_error": 0.0011,
+          "mean_confidence": 0.9996,
+          "state_divergence_score": 0.13,
+          "inferred_packet_ratio": 0.19
+        },
+        {
+          "packet_loss_rate": 0.3,
+          "loss_percentage": "30%",
+          "mean_absolute_reconstruction_error": 0.0034,
+          "mean_confidence": 0.9936,
+          "state_divergence_score": 0.195,
+          "inferred_packet_ratio": 0.36
+        },
+        {
+          "packet_loss_rate": 0.4,
+          "loss_percentage": "40%",
+          "mean_absolute_reconstruction_error": 0.0042,
+          "mean_confidence": 0.9898,
+          "state_divergence_score": 0.26,
+          "inferred_packet_ratio": 0.47
+        }
+      ]
+    },
+    "experiment_b": {
+      "experiment_id": "EXP-B-DELAY-JITTER",
+      "results": [
+        {
+          "delay_ms": 0,
+          "state_staleness_index": 0.0,
+          "decision_confidence": 1.0,
+          "decision_valid": true
+        },
+        {
+          "delay_ms": 100,
+          "state_staleness_index": 2.4,
+          "decision_confidence": 0.944,
+          "decision_valid": true
+        },
+        {
+          "delay_ms": 500,
+          "state_staleness_index": 12.0,
+          "decision_confidence": 0.722,
+          "decision_valid": true
+        },
+        {
+          "delay_ms": 1000,
+          "state_staleness_index": 24.0,
+          "decision_confidence": 0.444,
+          "decision_valid": true
+        }
+      ]
+    },
+    "experiment_c": {
+      "experiment_id": "EXP-C-SENSOR-NOISE-BENCHMARK",
+      "data": {
+        "dataset_size": 500,
+        "anomalies_injected": 50,
+        "statistical_detector": {
+          "true_positives": 10,
+          "false_positives": 1,
+          "false_negatives": 40,
+          "true_negatives": 449,
+          "precision": 0.9091,
+          "recall": 0.2,
+          "f1_score": 0.3279,
+          "avg_latency_microseconds": 7.79
+        },
+        "multivariate_ml_detector": {
+          "true_positives": 49,
+          "false_positives": 120,
+          "false_negatives": 1,
+          "true_negatives": 330,
+          "precision": 0.2899,
+          "recall": 0.98,
+          "f1_score": 0.4475,
+          "avg_latency_microseconds": 12297.55
+        }
+      }
+    },
+    "experiment_d": {
+      "experiment_id": "EXP-D-OUT-OF-ORDER",
+      "total_events": 8,
+      "detected_out_of_order": 2,
+      "details": [
+        {
+          "seq": 1,
+          "is_out_of_order": false
+        },
+        {
+          "seq": 2,
+          "is_out_of_order": false
+        },
+        {
+          "seq": 4,
+          "is_out_of_order": false
+        },
+        {
+          "seq": 3,
+          "is_out_of_order": true
+        },
+        {
+          "seq": 5,
+          "is_out_of_order": false
+        },
+        {
+          "seq": 7,
+          "is_out_of_order": false
+        },
+        {
+          "seq": 6,
+          "is_out_of_order": true
+        },
+        {
+          "seq": 8,
+          "is_out_of_order": false
+        }
+      ]
+    },
+    "experiment_e": {
+      "experiment_id": "EXP-E-INTERVENTION-RECOVERY",
+      "data": {
+        "action_name": "ACTIVATE_BACKUP_PUMP",
+        "target_nodes": [
+          "pump_03"
+        ],
+        "pre_intervention_blast_radius": 2,
+        "post_intervention_blast_radius": 1,
+        "mitigated_assets_count": 1,
+        "simulated_recovery_time_sec": 12.0,
+        "constraints_passed": true,
+        "improvement_percentage": 50.0
+      }
+    }
+  }
+}
